@@ -1,0 +1,190 @@
+/* 
+landing.html CSS 
+author: Ayrlin Renata
+*/
+
+/* ---------- elements ---------- */
+
+body {
+	overflow: hidden;
+}
+
+/* ---------- classes ---------- */
+
+.t-text {
+	/* position */
+	margin-left: 10px;
+	margin-right: 10px;
+	
+	/* text */
+	font-family: Josefin_Sans;
+	white-space: nowrap;
+	
+	/* animation */
+	animation-delay: 0s;
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+	opacity: 0;
+	
+	/* animated */
+	font-size: 15em;
+}
+
+.st-text {
+	/* position */
+	margin-left: 10px;
+	margin-right: 10px;
+	
+	/* text */
+	font-family: Josefin_Sans_Light;
+	white-space: nowrap;
+	
+	/* animation */
+	animation-delay: 0s;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+	
+	/* animated */
+	opacity: 0;
+	font-size: 3em;
+}
+.st-text.anim {
+	/* animation */
+	animation-name:subtitle-intro;
+}
+
+/* ---------- ids ---------- */
+
+#load-screen {
+	/* position */
+	position:absolute;
+	background: #151515;
+}
+#load-text-container {
+	/* position */
+	padding-top: 45vh;
+	
+	/* flex */
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+#load-title {
+	color: #FFFFFF; 
+	margin-left: auto;
+	margin-right: auto;
+}
+#load-subtitle {
+	color: #A0A0A0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#title-screen {
+	height: 100vh;
+	width: 100vw;
+}
+
+#title-container {
+	/* flex */
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	
+	/* position */
+	position: absolute;
+	width: 100vw;
+	
+	/* animated */
+	padding-top: 38vh;
+}
+#title-1.anim {
+	opacity: 100;
+	/* animation */
+	animation-name:title-1-intro;
+}
+#title-2.anim {
+	opacity: 100;
+	/* animation */
+	animation-name:title-2-intro;
+}
+#title-3.anim {
+	opacity: 100;
+	/* animation */
+	animation-name:title-3-intro;
+}
+#title-4.anim { 
+	opacity: 100;
+	/* animation */
+	animation-name:title-1-intro; /* reuses title 1 anim */
+}
+
+
+#subtitle-container {
+	/* flex */
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	
+	/* animated */
+	padding-top: 55vh;
+}
+
+/* ---------- animations ---------- */
+@keyframes title-1-intro { /* reused by title-4*/
+	0% { transform:translate(0px,70vh); }
+	100% { transform:translate(0px,0px); }
+}
+@keyframes title-2-intro {
+	0% { transform:translate(0px,-70vh); }
+	100% { transform:translate(0px,0px); }
+}
+@keyframes title-3-intro {
+	0% { transform:translate(-100vw,0px); }
+	100% { transform:translate(0px,0px); }
+}
+
+@keyframes subtitle-intro {
+	0% { opacity:0; }
+	100% { opacity:100; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

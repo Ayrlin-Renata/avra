@@ -1,0 +1,29 @@
+/* CSS */
+
+/* Fonts */
+@font-face { font-family: Josefin_Sans; src: url('../font/Josefin_Sans/JosefinSans-VariableFont_wght.ttf'); } 
+@font-face { font-family: Josefin_Sans_Light; src: url('../font/Josefin_Sans/static/JosefinSans-Light.ttf'); } 
+@font-face { font-family: Raleway; src: url('../font/Raleway/Raleway-Medium.ttf'); } 
+@font-face { font-family: Raleway_Light; src: url('../font/Raleway/Raleway-Light.ttf'); } 
+
+
+.basicstyle {
+	/* text */
+	font-family: Raleway,Calibri,Helvetica;
+}
+.fullslate {
+	/* size */
+	height: 100vh;
+	width: 100vw;
+}
+
+/* ---------- text ---------- */
+
+.heading-1 {
+	font-size: 3em;
+	font-family: Josefin_Sans_Light;
+}
+.subheading-1 {
+	font-size: 1.5em;
+	font-family: Raleway_Light;
+}

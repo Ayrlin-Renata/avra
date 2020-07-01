@@ -1,6 +1,6 @@
 /* CSS */
 
-/* Fonts */
+/* ---------- Fonts ---------- */
 @font-face { font-family: Josefin_Sans; src: url('../font/Josefin_Sans/JosefinSans-VariableFont_wght.ttf'); } 
 @font-face { font-family: Josefin_Sans_Light; src: url('../font/Josefin_Sans/static/JosefinSans-Light.ttf'); } 
 @font-face { font-family: Raleway; src: url('../font/Raleway/Raleway-Medium.ttf'); } 
@@ -17,7 +17,7 @@
 	width: 100vw;
 }
 
-/* ---------- text ---------- */
+/* ---------- Text ---------- */
 
 .heading-1 {
 	font-size: 3em;
@@ -26,4 +26,17 @@
 .subheading-1 {
 	font-size: 1.5em;
 	font-family: Raleway_Light;
+}
+
+
+
+/* ---------- Animations ---------- */
+
+@keyframes bounce {
+	76% {	transform: translateY(0vh);	}
+	79%	{	transform: translateY(1vh);	}
+	82%	{	transform: translateY(0vh);	}
+	89% {	transform: translateY(0vh);	}
+	92%	{	transform: translateY(1vh);	}
+	95%	{	transform: translateY(0vh);	}
 }

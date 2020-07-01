@@ -3,6 +3,7 @@ landing.html JS
 
 author: Ayrlin Renata
 */
+var plsNoClick = true;
 
 $(document).ready(function() {
 	loadTitle();
@@ -15,15 +16,49 @@ function loadTitle() {
 	//Remove load screen
 	$('#load-screen').css("display","none");
 	
-	//animate title screen
+	//Animate title screen
+	animIntro();
+}
+
+// ANIMATIONS
+
+function animIntro() {
 	//animate title
-	setTimeout(function() { $('#title-1').addClass('anim'); }, 200);
-	setTimeout(function() { $('#title-2').addClass('anim'); }, 400);
-	setTimeout(function() { $('#title-3').addClass('anim'); }, 600);
-	setTimeout(function() { $('#title-4').addClass('anim'); }, 800);
+	setTimeout(function() { $('#title-1').addClass('anim-intro'); }, 200);
+	setTimeout(function() { $('#title-2').addClass('anim-intro'); }, 400);
+	setTimeout(function() { $('#title-3').addClass('anim-intro'); }, 600);
+	setTimeout(function() { $('#title-4').addClass('anim-intro'); }, 800);
 	//animate subtitle
-	setTimeout(function() { $('#subtitle-1').addClass('anim'); }, 1000);
-	setTimeout(function() { $('#subtitle-2').addClass('anim'); }, 1500);
-	setTimeout(function() { $('#subtitle-3').addClass('anim'); }, 2000);
-	setTimeout(function() { $('#subtitle-4').addClass('anim'); }, 2500);
+	setTimeout(function() { $('#subtitle-1').addClass('anim-intro'); }, 1000);
+	setTimeout(function() { $('#subtitle-2').addClass('anim-intro'); }, 1500);
+	setTimeout(function() { $('#subtitle-3').addClass('anim-intro'); }, 2000);
+	setTimeout(function() { 
+		$('#subtitle-4').addClass('anim-intro'); 
+		$('#arrow-down').addClass('anim-intro'); 
+		plsNoClick = false;
+	}, 2500);
+	
+	setTimeout(function() { 
+		$('#arrow-down').removeClass('anim-intro'); 
+		$('#arrow-down').addClass('anim-intro-loop'); 
+	}, 2700);
+	
+}
+
+function animCollapse() {
+	if(plsNoClick)
+		return;
+	
+	//remove click
+	$('#title-screen').attr("onClick","");
+	
+	//remove previous animation
+	$('.t-text').removeClass("anim-intro");
+	$('#arrow-down').removeClass("anim-intro-loop");
+	
+	//do collapse anim
+	$('#title-screen').addClass('anim-collapse');
+	$('#title-container').addClass('anim-collapse');
+	$('#subtitle-container').addClass('anim-collapse');
+	$('.t-text').addClass('anim-collapse');
 }

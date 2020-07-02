@@ -63,7 +63,7 @@ body {
 }
 .st-text.anim-intro {
 	/* animation */
-	animation-name: subtitle-intro;
+	animation-name: fade-in;
 }
 
 /* ---------- ids ---------- */
@@ -207,7 +207,7 @@ body {
 	
 	/* animation */
 	animation-delay: 0s;
-	animation-duration: 1s;
+	animation-duration: 0.5s;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in;
 	animation-direction: normal;
@@ -218,10 +218,10 @@ body {
 }
 #arrow-down.anim-intro {
 	/* animation */
-	animation-name: arrow-down-intro;
+	animation-name: fade-in;
 }
 #arrow-down.anim-intro-loop {
-	opacity: 100;
+	opacity: 1;
 	/* animation */
 	animation-duration: 4s;
 	animation-iteration-count: infinite;
@@ -229,29 +229,49 @@ body {
 	animation-fill-mode: none;
 	animation-name: bounce;
 }
+#top-overlay {
+	position: absolute;
+	top: 0;
+	left: -4vw;
+	
+	/* animation */
+	animation-delay: 0.5s;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+	
+	/* animated */
+	opacity: 0;
+}
+#top-overlay.anim-collapse {
+	animation-name: top-overlay-collapse;
+}
+#tris-overlay {
+	filter: invert(1);
+	height: 20vh;
+}
+
 
 /* ---------- animations ---------- */
 @keyframes title-1-intro { /* reused by title-4*/
-	0% { transform:translate(0px,70vh); opacity: 10; }
-	100% { transform:translate(0px,0px); opacity: 100; }
+	0% { transform:translate(0px,70vh); opacity: 0.1; }
+	100% { transform:translate(0px,0px); opacity: 1; }
 }
 @keyframes title-2-intro {
-	0% { transform:translate(0px,-70vh); opacity: 10; }
-	100% { transform:translate(0px,0px); opacity: 100; }
+	0% { transform:translate(0px,-70vh); opacity: 0.1; }
+	100% { transform:translate(0px,0px); opacity: 1; }
 }
 @keyframes title-3-intro {
-	0% { transform:translate(-60vw,0px); opacity: 10; }
-	100% { transform:translate(0px,0px); opacity: 100; }
-}
-@keyframes subtitle-intro {
-	0% { opacity:0; }
-	100% { opacity:100; }
-}
-@keyframes arrow-down-intro {
-	0% { opacity:0; }
-	100% { opacity:100; }
+	0% { transform:translate(-60vw,0px); opacity: 0.1; }
+	100% { transform:translate(0px,0px); opacity: 1; }
 }
 
+@keyframes top-overlay-collapse {
+	0% { transform:translate(-30vw,0px); opacity: 0; }
+	100% { transform:translate(0px,0px); opacity: 1; }
+}
 @keyframes title-screen-collapse {
 	0% { height: 100vh; }
 	100% { height: 20vh; }

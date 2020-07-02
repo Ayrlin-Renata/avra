@@ -41,7 +41,7 @@ function animIntro() {
 	setTimeout(function() { 
 		$('#arrow-down').removeClass('anim-intro'); 
 		$('#arrow-down').addClass('anim-intro-loop'); 
-	}, 2700);
+	}, 3000);
 	
 }
 
@@ -60,5 +60,6 @@ function animCollapse() {
 	$('#title-screen').addClass('anim-collapse');
 	$('#title-container').addClass('anim-collapse');
 	$('#subtitle-container').addClass('anim-collapse');
+	$('#top-overlay').addClass('anim-collapse');
 	$('.t-text').addClass('anim-collapse');
 }

@@ -4,6 +4,7 @@ landing.html JS
 author: Ayrlin Renata
 */
 var plsNoClick = true;
+var clicked = false;
 
 $(document).ready(function() {
 	loadTitle();
@@ -40,7 +41,8 @@ function animIntro() {
 	
 	setTimeout(function() { 
 		$('#arrow-down').removeClass('anim-intro'); 
-		$('#arrow-down').addClass('anim-intro-loop'); 
+		if(!clicked) 
+			$('#arrow-down').addClass('anim-intro-loop'); 
 	}, 3000);
 	
 }
@@ -48,6 +50,7 @@ function animIntro() {
 function animCollapse() {
 	if(plsNoClick)
 		return;
+	clicked = true;
 	
 	//remove click
 	$('#title-screen').attr("onClick","");

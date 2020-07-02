@@ -16,6 +16,22 @@
 	height: 100vh;
 	width: 100vw;
 }
+.body-container {
+	margin-left: 10vw;
+	margin-right: 10vw;
+	overflow-y: scroll;
+}
+.body-container::-webkit-scrollbar {
+	display: none;
+}
+.body-row {
+	margin-top: 2em;
+	background-color: #00000070;
+	padding: 1em;
+}
+.body-col {
+	
+}
 
 /* ---------- Text ---------- */
 
@@ -26,6 +42,17 @@
 .subheading-1 {
 	font-size: 1.5em;
 	font-family: Raleway_Light;
+	margin-bottom: 1em;
+}
+.text-1 {
+	font-size: 1em;
+	font-family: Raleway_Light;
+	max-width: 60em;
+}
+.subtext-1 {
+	font-size: 1em;
+	font-family: Raleway_Light;
+	opacity: 0.5;
 }
 
 

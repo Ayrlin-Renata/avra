@@ -6,10 +6,12 @@ author: Ayrlin Renata
 /* ---------- elements ---------- */
 
 body {
-	overflow: hidden;
 	margin: 0px;
 	background-color: #151515;
 	color: #EEEEEE;
+}
+body::-webkit-scrollbar {
+	display: none;
 }
 
 /* ---------- classes ---------- */
@@ -257,7 +259,7 @@ body {
 }
 
 #content-area {
-	height: 80vh;
+	
 }
 
 
@@ -300,7 +302,7 @@ body {
 
 @media screen and (min-height:2161px) { /* larger than 4k */
 	#title-screen {
-		background:url("../img/bg/sky 8k.png");
+		background: url("../img/bg/sky 8k.png");
 		background-size: 100%;
 		background-position: center;
 		background-repeat: no-repeat;
@@ -309,7 +311,7 @@ body {
 }
 @media screen and (min-height:1441px) and (max-height:2160px) { /* larger than 1440p */
 	#title-screen {
-		background:url("../img/bg/sky 4k.png");
+		background: url("../img/bg/sky 4k.png");
 		background-size: 100%;
 		background-position: center;
 		background-repeat: no-repeat;
@@ -318,7 +320,7 @@ body {
 }
 @media screen and (min-height:1081px) and (max-height:1440px) { /* larger than 1080p */
 	#title-screen {
-		background:url("../img/bg/sky 1440p.png");
+		background: url("../img/bg/sky 1440p.png");
 		background-size: 100%;
 		background-position: center;
 		background-repeat: no-repeat;
@@ -327,7 +329,7 @@ body {
 }
 @media screen and (min-height:721px) and (max-height:1080px) { /* larger than 720p */
 	#title-screen {
-		background:url("../img/bg/sky 1080p.png");
+		background: url("../img/bg/sky 1080p.png");
 		background-size: 100%;
 		background-position: center;
 		background-repeat: no-repeat;
@@ -337,7 +339,7 @@ body {
 
 @media screen and (max-width:900px) {
 	#subtitle-container {
-		opacity: 0;
+		display: none;
 	}
 }
 

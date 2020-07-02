@@ -22,7 +22,7 @@
 .body-container {
 	margin-left: 10vw;
 	margin-right: 10vw;
-	overflow-y: scroll;
+	
 }
 .body-container::-webkit-scrollbar {
 	display: none;

@@ -341,6 +341,9 @@ body::-webkit-scrollbar {
 	#subtitle-container {
 		display: none;
 	}
+	#title-screen {
+		background-size: cover !important;
+	}
 }
 
 

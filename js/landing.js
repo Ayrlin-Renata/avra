@@ -25,7 +25,7 @@ function loadTitle() {
 function animIntro() {
 	//animate title
 	for(var tidx = 1; tidx < 5; tidx++) {
-		animIntroUtil(tidx,'#title-','anim-intro',200);
+		animIntroUtil(tidx,'#title-',200);
 	}
 	//animate subtitle
 	for(var tidx = 1; tidx < 5; tidx++) {

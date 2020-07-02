@@ -3,7 +3,6 @@ landing.html JS
 
 author: Ayrlin Renata
 */
-var plsNoClick = true;
 var clicked = false;
 
 $(document).ready(function() {
@@ -25,18 +24,17 @@ function loadTitle() {
 
 function animIntro() {
 	//animate title
-	setTimeout(function() { $('#title-1').addClass('anim-intro'); }, 200);
-	setTimeout(function() { $('#title-2').addClass('anim-intro'); }, 400);
-	setTimeout(function() { $('#title-3').addClass('anim-intro'); }, 600);
-	setTimeout(function() { $('#title-4').addClass('anim-intro'); }, 800);
+	for(var tidx = 1; tidx < 5; tidx++) {
+		animIntroUtil(tidx,'#title-','anim-intro',200);
+	}
 	//animate subtitle
-	setTimeout(function() { $('#subtitle-1').addClass('anim-intro'); }, 1000);
-	setTimeout(function() { $('#subtitle-2').addClass('anim-intro'); }, 1500);
-	setTimeout(function() { $('#subtitle-3').addClass('anim-intro'); }, 2000);
+	for(var tidx = 1; tidx < 5; tidx++) {
+		animIntroUtil(tidx,'#subtitle-',500);
+	}
 	setTimeout(function() { 
-		$('#subtitle-4').addClass('anim-intro'); 
-		$('#arrow-down').addClass('anim-intro'); 
-		plsNoClick = false;
+		if(!clicked) {
+			$('#arrow-down').addClass('anim-intro'); 
+		}
 	}, 2500);
 	
 	setTimeout(function() { 
@@ -47,9 +45,20 @@ function animIntro() {
 	
 }
 
+/**
+ * Workaround for setTimeout() not using different values in a loop
+ */
+function animIntroUtil(tidx,prefix,delta) {
+	setTimeout(function() { 
+		if(!clicked) {
+			$(prefix+tidx).addClass('anim-intro'); 
+		} else {
+			$(prefix+tidx).addClass('fullviz'); 
+		}
+	}, tidx*delta);
+}
+
 function animCollapse() {
-	if(plsNoClick)
-		return;
 	clicked = true;
 	
 	//remove click

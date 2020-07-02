@@ -5,11 +5,14 @@
 @font-face { font-family: Josefin_Sans_Light; src: url('../font/Josefin_Sans/static/JosefinSans-Light.ttf'); } 
 @font-face { font-family: Raleway; src: url('../font/Raleway/Raleway-Medium.ttf'); } 
 @font-face { font-family: Raleway_Light; src: url('../font/Raleway/Raleway-Light.ttf'); } 
+@font-face { font-family: Roboto; src: url('../font/Roboto/Roboto-Regular.ttf'); } 
+@font-face { font-family: Roboto_Light; src: url('../font/Roboto/Roboto-Light.ttf'); } 
+@font-face { font-family: Roboto_Thin; src: url('../font/Roboto/Roboto-Thin.ttf'); } 
 
 
 .basicstyle {
 	/* text */
-	font-family: Raleway,Calibri,Helvetica;
+	font-family: Roboto_Light,Raleway,Calibri,Helvetica;
 }
 .fullslate {
 	/* size */
@@ -46,16 +49,19 @@
 }
 .text-1 {
 	font-size: 1em;
-	font-family: Raleway_Light;
+	font-family: Roboto_Light;
 	max-width: 60em;
 }
 .subtext-1 {
 	font-size: 1em;
-	font-family: Raleway_Light;
+	font-family: Roboto_Thin;
 	opacity: 0.5;
 }
 
-
+/* ---------- effects ---------- */
+.fullviz {
+	opacity: 1 !important;
+}
 
 /* ---------- Animations ---------- */
 

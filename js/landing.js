@@ -75,3 +75,4 @@ function animCollapse() {
 	$('#top-overlay').addClass('anim-collapse');
 	$('.t-text').addClass('anim-collapse');
 }
+

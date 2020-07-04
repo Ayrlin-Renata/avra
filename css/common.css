@@ -9,6 +9,9 @@
 @font-face { font-family: Roboto_Light; src: url('../font/Roboto/Roboto-Light.ttf'); } 
 @font-face { font-family: Roboto_Thin; src: url('../font/Roboto/Roboto-Thin.ttf'); } 
 
+a {
+	color: #00AAAA;
+}
 
 .basicstyle {
 	/* text */

@@ -1,0 +1,164 @@
+/* 
+Stories.html CSS 
+author: Ayrlin Renata
+*/
+
+/* ---------- elements ---------- */
+a {
+	text-decoration: none;
+}
+
+/* ---------- classes ---------- */
+
+.t-text {
+	/* position */
+	margin-left: 10px;
+	margin-right: 10px;
+	
+	/* text */
+	font-family: Josefin_Sans;
+	white-space: nowrap;
+	font-size: 13vh;
+}
+
+.st-text {
+	/* position */
+	margin-left: 10px;
+	margin-right: 10px;
+	
+	/* text */
+	font-family: Josefin_Sans_Light;
+	white-space: nowrap;
+	font-size: 3.5vh;
+}
+
+/* ---------- ids ---------- */
+
+#load-screen {
+	/* position */
+	position:absolute;
+	background: #151515;
+}
+#load-text-container {
+	/* position */
+	padding-top: 45vh;
+	
+	/* flex */
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+#load-title {
+	color: #FFFFFF; 
+	margin-left: auto;
+	margin-right: auto;
+}
+#load-subtitle {
+	color: #A0A0A0;
+	margin-left: auto;
+	margin-right: auto;
+}
+#title-screen {
+	/* position */
+	position: static;
+	width: 100vw;
+	height: 20vh;
+	
+	/* bg */
+	background: url("../img/bg/sky 720p.png"); /* media override for larger screens*/
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: #151515;
+	background-size: 100%;
+	
+	/* function */
+	user-select: none;
+
+}
+#title-container {
+	/* flex */
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	
+	/* position */
+	width: 100vw;
+	padding-top: 3vh;
+	
+	/* text */
+	color: #FFFFFF;
+}
+#subtitle-container {
+	/* flex */
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: -1.5vh;
+	
+	/* text */
+	color: #FFFFFF;
+}
+#top-overlay {
+	/* position */
+	position: absolute;
+	top: 0;
+	left: -4vw;
+	opacity: 1;
+}
+#tris-overlay {
+	filter: invert(1);
+	height: 20vh;
+	opacity: 0.5;
+}
+
+/* ---------- dynamic design yayyyyyyyyyyyyyyyyy......... ---------- */
+
+@media screen and (min-height:2161px) { /* larger than 4k */
+	#title-screen {
+		background: url("../img/bg/sky 8k.png");
+		background-size: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-color: #151515;
+	}
+}
+@media screen and (min-height:1441px) and (max-height:2160px) { /* larger than 1440p */
+	#title-screen {
+		background: url("../img/bg/sky 4k.png");
+		background-size: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-color: #151515;
+	}
+}
+@media screen and (min-height:1081px) and (max-height:1440px) { /* larger than 1080p */
+	#title-screen {
+		background: url("../img/bg/sky 1440p.png");
+		background-size: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-color: #151515;
+	}
+}
+@media screen and (min-height:721px) and (max-height:1080px) { /* larger than 720p */
+	#title-screen {
+		background: url("../img/bg/sky 1080p.png");
+		background-size: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-color: #151515;
+	}
+}
+
+@media screen and (max-width:900px) {
+	#subtitle-container {
+		display: none;
+	}
+	#title-screen {
+		background-size: cover !important;
+	}
+}
+
+

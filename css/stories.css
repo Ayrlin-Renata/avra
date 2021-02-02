@@ -8,6 +8,15 @@ a {
 	text-decoration: none;
 }
 
+hr {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	border-color: #777777;
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+}
+
 /* ---------- classes ---------- */
 
 .t-text {
@@ -30,6 +39,10 @@ a {
 	font-family: Josefin_Sans_Light;
 	white-space: nowrap;
 	font-size: 3.5vh;
+}
+
+.body-row {
+	padding-right: 5vw;
 }
 
 /* ---------- ids ---------- */

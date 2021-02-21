@@ -17,6 +17,24 @@ hr {
 	border-right: none;
 }
 
+mark {
+	background-color: transparent;
+	color: #eeeeee;
+}
+
+code {
+	/* position */
+	padding-left: 7px;
+	padding-right: 7px;
+	
+	/* text */
+	font-family: Roboto_Mono_Thin;
+	white-space: pre-wrap;
+	font-size: 0.9em;
+	background-color: #050505;
+	border-radius: 4px;
+}
+
 /* ---------- classes ---------- */
 
 .t-text {
@@ -43,6 +61,34 @@ hr {
 
 .body-row {
 	padding-right: 5vw;
+}
+
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
 }
 
 /* ---------- ids ---------- */
@@ -119,6 +165,7 @@ hr {
 	top: 0;
 	left: -4vw;
 	opacity: 1;
+	pointer-events: none;
 }
 #tris-overlay {
 	filter: invert(1);

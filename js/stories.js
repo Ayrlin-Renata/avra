@@ -6,6 +6,13 @@ $(document).ready(function() {
 function loadTitle() {
 	//Remove load screen
 	$('#load-screen').css("display","none");
+	//Make title clickable
+	const title = document.querySelector("#title-container");
+	title.addEventListener("click",navLanding);
+}
+
+function navLanding() {
+	window.location = "./landing.html";
 }
 
 function openAnchor() {

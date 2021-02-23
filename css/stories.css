@@ -194,7 +194,7 @@ input {
 	font-family: Roboto_Mono !important;
 }
 
-#HCB_comment_box > a {
+#HCB_comment_form_box > a {
 	color: #eeeeee !important;
 	background-image: none !important;
     outline: none !important;

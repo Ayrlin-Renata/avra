@@ -193,7 +193,10 @@ input {
 	background-color: #090909 !important;
 	font-family: Roboto_Mono !important;
 }
+
+#HCB_comment_box > a,
 #hcb_file_label > a {
+	color: #eeeeee !important;
 	background-color: #131313 !important;
 	border-color: #131313 !important;
 	font-family: Roboto_Mono !important;

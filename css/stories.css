@@ -234,7 +234,11 @@ input {
 }
 
 #comments_list {
-	font-family: Roboto_Light !important;
+	font-family: Roboto_Mono_Light !important;
+}
+
+#comments_list > .comment {
+	background-color: #131313;
 }
 
 /* ---------- dynamic design yayyyyyyyyyyyyyyyyy......... ---------- */

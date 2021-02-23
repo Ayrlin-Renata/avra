@@ -10,6 +10,7 @@ async function loadStories() {
 	allStories += await fetchHtmlAsText("stories/sacrifice.html");
 	allStories += await fetchHtmlAsText("stories/afterlife.html");
 	insertDiv.innerHTML = allStories; 
+	initListeners();
 }
 
 function openAnchor() {

@@ -194,7 +194,20 @@ input {
 	font-family: Roboto_Mono !important;
 }
 
-#HCB_comment_box > a,
+#HCB_comment_box > a {
+	color: #eeeeee !important;
+	background-image: none !important;
+    outline: none !important;
+    border: solid 1px #131313 !important;
+	font-family: Roboto_Mono !important;
+    transition: none !important;
+    background-repeat: no-repeat !important;
+    box-shadow: none !important;
+    background-color: #131313 !important;
+	margin-top: 0px !important;
+	margin-bottom: 1em !important;
+}
+
 #hcb_file_label > a {
 	color: #eeeeee !important;
 	background-color: #131313 !important;

@@ -4,11 +4,20 @@ landing.html JS
 author: Ayrlin Renata
 */
 var clicked = false;
+var skipIntro = false;
 
 $(document).ready(function() {
+	openGet();
 	loadTitle();
 	
 });
+
+function openGet() {
+	var sear = window.location.search;
+	if(sear) {
+		skipIntro = true;
+	} 
+}
 
 function loadTitle() {
 	//load the title images
@@ -31,31 +40,37 @@ function animIntro() {
 	for(var tidx = 1; tidx < 5; tidx++) {
 		animIntroUtil(tidx,'#subtitle-',500);
 	}
-	setTimeout(function() { 
-		if(!clicked) {
-			$('#arrow-down').addClass('anim-intro'); 
-		}
-	}, 2500);
-	
-	setTimeout(function() { 
-		$('#arrow-down').removeClass('anim-intro'); 
-		if(!clicked) 
-			$('#arrow-down').addClass('anim-intro-loop'); 
-	}, 3000);
-	
+	if(!skipIntro) {
+		setTimeout(function() { 
+			if(!clicked) {
+				$('#arrow-down').addClass('anim-intro'); 
+			}
+		}, 2500);
+		
+		setTimeout(function() { 
+			$('#arrow-down').removeClass('anim-intro'); 
+			if(!clicked) 
+				$('#arrow-down').addClass('anim-intro-loop'); 
+		}, 3000);
+	} else {
+		animCollapse();
+	}
 }
 
 /**
  * Workaround for setTimeout() not using different values in a loop
  */
 function animIntroUtil(tidx,prefix,delta) {
+	if(skipIntro) {
+		$(prefix+tidx).addClass('skip-anim');
+	}
 	setTimeout(function() { 
 		if(!clicked) {
 			$(prefix+tidx).addClass('anim-intro'); 
 		} else {
 			$(prefix+tidx).addClass('fullviz'); 
 		}
-	}, tidx*delta);
+	}, (skipIntro)? 0 : tidx*delta);
 }
 
 function animCollapse() {
@@ -68,6 +83,13 @@ function animCollapse() {
 	$('.t-text').removeClass("anim-intro");
 	$('#arrow-down').removeClass("anim-intro-loop");
 	
+	if(skipIntro) {
+		$('#title-screen').addClass('skip-anim');
+		$('#title-container').addClass('skip-anim');
+		$('#subtitle-container').addClass('skip-anim');
+		$('#top-overlay').addClass('skip-anim');
+		$('.t-text').addClass('skip-anim');
+	}
 	//do collapse anim
 	$('#title-screen').addClass('anim-collapse');
 	$('#title-container').addClass('anim-collapse');

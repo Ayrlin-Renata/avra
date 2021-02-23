@@ -1,6 +1,5 @@
 $(document).ready(function() {
 	loadStories();
-	openAnchor();
 	loadTitle();
 });
 
@@ -11,6 +10,7 @@ async function loadStories() {
 	allStories += await fetchHtmlAsText("stories/afterlife.html");
 	insertDiv.innerHTML = allStories; 
 	initListeners();
+	openAnchor();
 }
 
 function openAnchor() {

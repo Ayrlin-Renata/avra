@@ -41,6 +41,10 @@ code {
 	border-radius: 4px;
 }
 
+input {
+	background-color: #131313;
+}
+
 /* ---------- classes ---------- */
 
 .t-text {
@@ -177,6 +181,60 @@ code {
 	filter: invert(1);
 	height: 20vh;
 	opacity: 0.5;
+}
+
+/* COMMENTS FIXING */
+#HCB_comment_box > h3 {
+	display: none;
+}
+
+#HCB_comment_box input, 
+#HCB_comment_box textarea {
+	background-color: #090909 !important;
+	font-family: Roboto_Mono !important;
+}
+#hcb_file_label > a {
+	background-color: #131313 !important;
+	border-color: #131313 !important;
+	font-family: Roboto_Mono !important;
+	padding: 5px !important;
+	margin-left: 15px !important;
+	margin-top: 0px !important;
+	vertical-align: top !important;
+}
+
+#hcb_submit {
+	margin-bottom: 0px !important;
+	padding: 5px !important;
+}
+
+#hcb_form > div.home-desc {
+	display: none;
+}
+
+#hcb_subscribe > span {
+	font-family: Roboto_Mono !important;
+	vertical-align: top !important;
+}
+
+#hcb_settings {
+	/* color: #006666 !important; */
+	font-family: Roboto_Mono !important;
+	vertical-align: text-bottom !important;
+}
+
+#hcb_settings > img {
+	display: none !important;
+}
+
+#comment-cred > a {
+	color: #00AAAA;
+	font-family: Roboto_Mono;
+	font-size: 0.8em;
+}
+
+#comments_list {
+	font-family: Roboto_Light !important;
 }
 
 /* ---------- dynamic design yayyyyyyyyyyyyyyyyy......... ---------- */

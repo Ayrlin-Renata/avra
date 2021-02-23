@@ -247,6 +247,10 @@ input {
 	font-style: normal;
 }
 
+#comments_list > .comment > .hcb-comment-tb > a {
+	color: #00AAAA;
+}
+
 /* ---------- dynamic design yayyyyyyyyyyyyyyyyy......... ---------- */
 
 @media screen and (min-height:2161px) { /* larger than 4k */

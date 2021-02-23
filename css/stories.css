@@ -238,7 +238,13 @@ input {
 }
 
 #comments_list > .comment {
-	background-color: #131313;
+	background-color: #090909;
+    padding: 1em;
+    padding-top: 0.1em;
+}
+
+#comments_list > .comment > blockquote {
+	font-style: normal;
 }
 
 /* ---------- dynamic design yayyyyyyyyyyyyyyyyy......... ---------- */

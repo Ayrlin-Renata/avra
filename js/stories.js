@@ -1,3 +1,5 @@
+var fixAttempts = 0;
+
 $(document).ready(function() {
 	loadStories();
 	loadTitle();
@@ -35,7 +37,10 @@ function fixComments() {
 	if(broke) {
 		broke.outerHTML = "<div id=\"HCB_comment_form_box\">" + broke.outerHTML + "<div>";
 	} else {
-		setTimeout(function() {fixComments();}, 100);
+		if(fixAttempts < 100) {
+			fixAttempts++;
+			setTimeout(function() {fixComments();}, 100);
+		}
 	}
 }
 

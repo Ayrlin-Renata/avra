@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	loadStories();
 	loadTitle();
+	fixComments();
 });
 
 async function loadStories() {
@@ -24,6 +25,18 @@ function openAnchor() {
 function loadTitle() {
 	//Remove load screen
 	$('#load-screen').css("display","none");
+}
+
+/**
+ * Ok this is the dumbest thing i've done in a while but hey, bugs in 3rd party stuff
+ */
+function fixComments() {
+	const broke = document.querySelector("#HCB_comment_box > a.btn.btn-secondary");
+	if(broke) {
+		broke.outerHTML = "<div id=\"HCB_comment_form_box\">" + broke.outerHTML + "<div>";
+	} else {
+		setTimeout(function() {fixComments();}, 100);
+	}
 }
 
 async function fetchHtmlAsText(url) {

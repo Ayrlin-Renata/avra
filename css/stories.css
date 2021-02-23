@@ -230,6 +230,10 @@ input {
 	display: none !important;
 }
 
+#hcb_msg {
+	font-family: Roboto_Mono_Light !important;
+}
+
 #comment-cred > a {
 	color: #00AAAA;
 	font-family: Roboto_Mono;

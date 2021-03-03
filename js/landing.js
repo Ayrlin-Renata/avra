@@ -37,8 +37,8 @@ function animIntro() {
 		animIntroUtil(tidx,'#title-', 0, 200);
 	}
 	//animate subtitle
-	for(var tidx = 1; tidx < 5; tidx++) {
-		animIntroUtil(tidx,'#subtitle-', 500, 400);
+	for(var tidx = 1; tidx < 8; tidx++) {
+		animIntroUtil(tidx,'#subtitle-', 500, 200);
 	}
 	if(!skipIntro) {
 		setTimeout(function() { 

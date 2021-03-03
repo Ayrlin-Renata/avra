@@ -28,19 +28,6 @@ mark {
 	color: #eeeeee;
 }
 
-code {
-	/* position */
-	padding-left: 7px;
-	padding-right: 7px;
-	
-	/* text */
-	font-family: Roboto_Mono_Thin;
-	white-space: pre-wrap;
-	font-size: 0.9em;
-	background-color: #050505;
-	border-radius: 4px;
-}
-
 input {
 	background-color: #131313;
 }

@@ -6,5 +6,5 @@
 
 /* ---------- Effects ---------- */
 .cursive {
-	font-family: Satisfy;
+	font-family: Satisfy !important;
 }

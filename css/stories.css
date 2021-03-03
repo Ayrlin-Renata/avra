@@ -45,6 +45,10 @@ input {
 	background-color: #131313;
 }
 
+blockquote {
+	font-style: italic;
+}
+
 /* ---------- classes ---------- */
 
 .t-text {

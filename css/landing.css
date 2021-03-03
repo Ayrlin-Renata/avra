@@ -278,6 +278,21 @@ body::-webkit-scrollbar {
 	opacity: 0.5;
 }
 
+/* ---------- ko-fi fixes ---------- */
+[id^=kofi-widget-overlay] {
+	background-color: #0c0c0c !important;
+    margin-top: 2em !important;
+    margin-bottom: 0px !important;
+    padding-bottom: 1em !important;
+}
+.floatingchat-container-wrap {
+	position: initial !important;
+}
+.floatingchat-container-wrap > .floatingchat-container {
+	position: initial !important;
+	margin-left: 10vw;
+}
+
 /* ---------- animations ---------- */
 @keyframes title-1-intro { /* reused by title-4*/
 	0% { transform:translate(0px,70vh); opacity: 0.1; }
@@ -353,6 +368,10 @@ body::-webkit-scrollbar {
 }
 
 @media screen and (max-width:900px) {
+	@keyframes title-container-collapse {
+		0% { padding-top: 38vh; }
+		100% { padding-top: 4.5vh; }
+	}
 	#subtitle-container {
 		display: none;
 	}

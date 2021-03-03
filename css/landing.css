@@ -18,12 +18,13 @@ body::-webkit-scrollbar {
 
 .t-text {
 	/* position */
-	margin-left: 10px;
-	margin-right: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
 	
 	/* text */
 	font-family: Josefin_Sans;
 	white-space: nowrap;
+	text-shadow: 1px 2px 3px #ffffff;
 	
 	/* animation */
 	animation-delay: 0s;
@@ -55,7 +56,7 @@ body::-webkit-scrollbar {
 	
 	/* animation */
 	animation-delay: 0s;
-	animation-duration: 1s;
+	animation-duration: 2s;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in;
 	animation-direction: normal;
@@ -180,6 +181,7 @@ body::-webkit-scrollbar {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	align-items: baseline;
 	
 	/* animation */
 	animation-delay: 0s;
@@ -197,6 +199,22 @@ body::-webkit-scrollbar {
 }
 #subtitle-container.anim-collapse {
 	animation-name: subtitle-container-collapse;
+}
+
+#subtitle-1 {
+    text-shadow: 1px 2px 2px #ffffff;
+}
+#subtitle-2 {
+	color: #808080;
+    text-shadow: 1px 2px 1px #a0a0a0;
+}
+#subtitle-3 {
+	color: #505050;
+    text-shadow: 1px 2px 1px #202020;
+}
+#subtitle-4 {
+	color: #202020;
+    text-shadow: 1px 2px 1px #000000;
 }
 
 #arrow-down-container {
@@ -284,7 +302,7 @@ body::-webkit-scrollbar {
 }
 @keyframes title-container-collapse {
 	0% { padding-top: 38vh; }
-	100% { padding-top: 3vh; }
+	100% { padding-top: 2.2vh; }
 }
 @keyframes subtitle-container-collapse {
 	0% { margin-top: 0px; }

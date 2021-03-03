@@ -34,24 +34,24 @@ function loadTitle() {
 function animIntro() {
 	//animate title
 	for(var tidx = 1; tidx < 5; tidx++) {
-		animIntroUtil(tidx,'#title-',200);
+		animIntroUtil(tidx,'#title-', 0, 200);
 	}
 	//animate subtitle
 	for(var tidx = 1; tidx < 5; tidx++) {
-		animIntroUtil(tidx,'#subtitle-',500);
+		animIntroUtil(tidx,'#subtitle-', 500, 600);
 	}
 	if(!skipIntro) {
 		setTimeout(function() { 
 			if(!clicked) {
 				$('#arrow-down').addClass('anim-intro'); 
 			}
-		}, 2500);
+		}, 3800);
 		
 		setTimeout(function() { 
 			$('#arrow-down').removeClass('anim-intro'); 
 			if(!clicked) 
 				$('#arrow-down').addClass('anim-intro-loop'); 
-		}, 3000);
+		}, 4300);
 	} else {
 		animCollapse();
 	}
@@ -60,7 +60,7 @@ function animIntro() {
 /**
  * Workaround for setTimeout() not using different values in a loop
  */
-function animIntroUtil(tidx,prefix,delta) {
+function animIntroUtil(tidx,prefix,delay,delta) {
 	if(skipIntro) {
 		$(prefix+tidx).addClass('skip-anim');
 	}
@@ -70,7 +70,7 @@ function animIntroUtil(tidx,prefix,delta) {
 		} else {
 			$(prefix+tidx).addClass('fullviz'); 
 		}
-	}, (skipIntro)? 0 : tidx*delta);
+	}, (skipIntro)? 0 : delay + tidx*delta);
 }
 
 function animCollapse() {

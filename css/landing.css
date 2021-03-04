@@ -209,15 +209,27 @@ body::-webkit-scrollbar {
 }
 #subtitle-5 {
 	color: #808080;
-    text-shadow: 1px 2px 1px #a0a0a0;
+    text-shadow: 1px 2px 2px #a0a0a0;
+	font-family: Raleway_LightItalic;
+	font-size: 3vh;
+	margin-left: 8px;
+	margin-right: 8px;
 }
 #subtitle-6 {
 	color: #505050;
-    text-shadow: 1px 2px 1px #202020;
+    text-shadow: 1px 2px 2px #202020;
+	font-family: Raleway_LightItalic;
+	font-size: 3vh;
+	margin-left: 8px;
+	margin-right: 8px;
 }
 #subtitle-7 {
 	color: #202020;
-    text-shadow: 1px 2px 1px #000000;
+    text-shadow: 1px 2px 2px #000000;
+	font-family: Raleway_LightItalic;
+	font-size: 3vh;
+	margin-left: 8px;
+	margin-right: 8px;
 }
 
 #arrow-down-container {
@@ -255,6 +267,8 @@ body::-webkit-scrollbar {
 }
 #top-overlay {
 	pointer-events: none;
+	filter: drop-shadow(2px 4px 6px black);
+	mix-blend-mode: overlay;
 
 	/* position */
 	position: absolute;

@@ -36,6 +36,10 @@ blockquote {
 	font-style: italic;
 }
 
+iframe {
+	border: none;
+    width: 100%;
+}
 /* ---------- classes ---------- */
 
 .t-text {
@@ -47,6 +51,7 @@ blockquote {
 	font-family: Josefin_Sans;
 	white-space: nowrap;
 	font-size: 13vh;
+	text-shadow: 1px 2px 3px #ffffff;
 }
 
 .st-text {
@@ -145,7 +150,7 @@ blockquote {
 	
 	/* position */
 	width: 100vw;
-	padding-top: 3vh;
+	padding-top: 2vh;
 	
 	/* text */
 	color: #FFFFFF;
@@ -156,10 +161,43 @@ blockquote {
 	flex-direction: row;
 	justify-content: center;
 	margin-top: -1.5vh;
+	align-items: baseline;
+
 	
 	/* text */
 	color: #FFFFFF;
 }
+#subtitle-1,
+#subtitle-2,
+#subtitle-3,
+#subtitle-4 {
+    text-shadow: 1px 2px 2px #ffffff;
+}
+#subtitle-5 {
+	color: #808080;
+    text-shadow: 1px 2px 2px #a0a0a0;
+	font-family: Raleway_LightItalic;
+	font-size: 3vh;
+	margin-left: 8px;
+	margin-right: 8px;
+}
+#subtitle-6 {
+	color: #505050;
+    text-shadow: 1px 2px 2px #202020;
+	font-family: Raleway_LightItalic;
+	font-size: 3vh;
+	margin-left: 8px;
+	margin-right: 8px;
+}
+#subtitle-7 {
+	color: #202020;
+    text-shadow: 1px 2px 2px #000000;
+	font-family: Raleway_LightItalic;
+	font-size: 3vh;
+	margin-left: 8px;
+	margin-right: 8px;
+}
+
 #top-overlay {
 	/* position */
 	position: absolute;
@@ -173,6 +211,12 @@ blockquote {
 	height: 20vh;
 	opacity: 0.5;
 }
+
+/* STORY CONTAINER */
+#story-container {
+	margin-top: 2em;
+}
+
 
 /* COMMENTS FIXING */
 #HCB_comment_box > h3 {

@@ -327,6 +327,26 @@ body::-webkit-scrollbar {
 	stroke-width: 2 !important;
 }
 
+/* ---------- random title ---------- */
+.rtitle {
+	animation-timing-function: ease-in;
+	color: #00aacc;
+}
+.rtitle.anim-rtitle-out {
+	animation: fade-out 1s;
+}
+.rtitle.anim-rtitle {
+	animation: from-below 2s, fade-in 5s;
+}
+#rtitle {
+	flex-wrap: wrap;
+	font-variant-caps: small-caps;
+	display: flex;
+	flex-direction: row;
+}
+#rtitle > div {
+	margin-right: 0.25em;
+}
 
 /* ---------- animations ---------- */
 @keyframes title-1-intro { /* reused by title-4*/

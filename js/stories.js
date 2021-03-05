@@ -1,20 +1,21 @@
 var fixAttempts = 0;
 
 $(document).ready(function() {
-	loadStories();
-	loadTitle();
-	fixComments();
-});
-
-async function loadStories() {
-	const insertDiv = document.getElementById("story-container");
-	var allStories = "";
-	allStories += await fetchHtmlAsText("stories/sacrifice.html");
-	allStories += await fetchHtmlAsText("stories/afterlife.html");
-	insertDiv.innerHTML = allStories; 
+	//loadStories();
 	initListeners();
 	openAnchor();
-}
+	loadTitle();
+	fixComments();
+
+});
+
+// async function loadStories() {
+// 	/*const insertDiv = document.getElementById("story-container");
+// 	var allStories = "";
+// 	allStories += await fetchHtmlAsText("stories/sacrifice.html");
+// 	allStories += await fetchHtmlAsText("stories/afterlife.html");
+// 	insertDiv.innerHTML = allStories; */
+// }
 
 function openAnchor() {
 	var hash = window.location.hash.substr(1);

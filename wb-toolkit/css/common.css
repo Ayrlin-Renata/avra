@@ -45,12 +45,6 @@ html.basicstyle {
 	min-width: 505px;
 	height: min-content;
 }
-html.basicstyle > body {
-	text-align: -webkit-center;
-}
-html.basicstyle > body > div {
-	text-align: initial;
-}
 .fullslate {
 	/* size */
 	height: 100vh;
@@ -124,7 +118,7 @@ html.basicstyle > body > div {
 .cover-image {
 	width: 100%;
 	margin-top: 2em;
-    margin-bottom: -2.4em;
+    margin-bottom: -2em;
 }
 .cover-image > img {
 	width: 100%;
@@ -189,6 +183,29 @@ html.basicstyle > body > div {
 /* ---------- effects ---------- */
 .fullviz {
 	opacity: 1 !important;
+}
+
+/* ---------- standard load ----------*/
+#load-screen {
+    position: absolute;
+    background: #151515;
+}
+#load-text-container {
+    padding-top: 45vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+#load-title {
+	color: #FFFFFF;
+    margin-left: auto;
+    margin-right: auto;
+}
+#load-subtitle {
+    color: #A0A0A0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* ---------- Animations ---------- */

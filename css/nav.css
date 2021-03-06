@@ -1,0 +1,151 @@
+body::-webkit-scrollbar {
+	display: none;
+}
+
+#nav > div {
+	text-align: -webkit-center;
+}
+#nav > div > div {
+	text-align: initial;
+}
+
+/* ---------- ko-fi fixes ---------- */
+[id^=kofi-widget-overlay] {
+	background-color: #0c0c0c !important;
+    margin-top: 2em !important;
+    margin-bottom: 0px !important;
+    padding-bottom: 1em !important;
+}
+.floatingchat-container-wrap {
+	position: initial !important;
+}
+.floatingchat-container-wrap > .floatingchat-container {
+	position: initial !important;
+	margin-left: 10vw;
+}
+.floating-chat-kofi-popup-iframe-container {
+	border-radius: 16px !important;
+}
+.floating-chat-kofi-popup-iframe-closer {
+    top: 20px !important;
+    right: -12px !important;
+    border: 2px solid #00aaaa !important;
+    background: #151515 !important;
+    box-shadow: none !important;
+}
+.floating-chat-kofi-popup-iframe-closer > span {
+	top: 0px !important;
+}
+.floating-chat-kofi-popup-iframe-closer > span > svg > line {
+	stroke: #00aaaa !important;
+	stroke-width: 2 !important;
+}
+
+/* ---------- random title ---------- */
+.rtitle {
+	animation-timing-function: ease-in;
+	color: #00aacc;
+}
+.rtitle.anim-rtitle-out {
+	animation: fade-out 1s;
+}
+.rtitle.anim-rtitle {
+	animation: from-below 2s, fade-in 5s;
+}
+#rtitle {
+	flex-wrap: wrap;
+	font-variant-caps: small-caps;
+	display: flex;
+	flex-direction: row;
+}
+#rtitle > div {
+	margin-right: 0.25em;
+}
+
+/* COMMENTS FIXING */
+#HCB_comment_box > h3 {
+	display: none;
+}
+
+#HCB_comment_box input, 
+#HCB_comment_box textarea {
+	background-color: #090909 !important;
+	font-family: Roboto_Mono !important;
+}
+
+#HCB_comment_form_box > a {
+	color: #eeeeee !important;
+	background-image: none !important;
+    outline: none !important;
+    border: solid 1px #131313 !important;
+	font-family: Roboto_Mono !important;
+    transition: none !important;
+    background-repeat: no-repeat !important;
+    box-shadow: none !important;
+    background-color: #131313 !important;
+	margin-top: 0px !important;
+	margin-bottom: 1em !important;
+}
+
+#hcb_file_label > a {
+	color: #eeeeee !important;
+	background-color: #131313 !important;
+	border-color: #131313 !important;
+	font-family: Roboto_Mono !important;
+	padding: 5px !important;
+	margin-left: 15px !important;
+	margin-top: 0px !important;
+	vertical-align: top !important;
+}
+
+#hcb_submit {
+	margin-bottom: 0px !important;
+	padding: 5px !important;
+}
+
+#hcb_form > div.home-desc {
+	display: none;
+}
+
+#hcb_subscribe > span {
+	font-family: Roboto_Mono !important;
+	vertical-align: top !important;
+}
+
+#hcb_settings {
+	/* color: #006666 !important; */
+	font-family: Roboto_Mono !important;
+	vertical-align: text-bottom !important;
+}
+
+#hcb_settings > img {
+	display: none !important;
+}
+
+#hcb_msg {
+	font-family: Roboto_Mono_Light !important;
+}
+
+#comment-cred > a {
+	color: #00AAAA;
+	font-family: Roboto_Mono;
+	font-size: 0.8em;
+}
+
+#comments_list {
+	font-family: Roboto_Mono_Light !important;
+}
+
+#comments_list > .comment {
+	background-color: #090909;
+    padding: 1em;
+    padding-top: 0.1em;
+}
+
+#comments_list > .comment > blockquote {
+	font-style: normal;
+}
+
+#comments_list > .comment > .hcb-comment-tb > a {
+	color: #00AAAA;
+}

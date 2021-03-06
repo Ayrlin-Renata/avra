@@ -1,21 +1,28 @@
 var fixAttempts = 0;
 
 $(document).ready(function() {
-	//loadStories();
 	initListeners();
+	initMyListeners();
 	openAnchor();
 	loadTitle();
 	fixComments();
-
+	
 });
 
-// async function loadStories() {
-// 	/*const insertDiv = document.getElementById("story-container");
-// 	var allStories = "";
-// 	allStories += await fetchHtmlAsText("stories/sacrifice.html");
-// 	allStories += await fetchHtmlAsText("stories/afterlife.html");
-// 	insertDiv.innerHTML = allStories; */
-// }
+function initMyListeners() {
+
+}
+
+function clickCard(card) {
+	var dofull = false;
+	if(!$(card).hasClass('full')) {
+		dofull = true;
+	}
+	$(card).parent().children().removeClass('full');
+	if(dofull) {
+		$(card).addClass('full');
+	}
+}
 
 function openAnchor() {
 	var hash = window.location.hash.substr(1);

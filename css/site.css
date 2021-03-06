@@ -1,0 +1,10 @@
+/* CSS */
+
+/* ---------- Fonts ---------- */
+@font-face { font-family: Satisfy; src: url('../font/Satisfy/Satisfy-Regular.ttf'); } 
+
+
+/* ---------- Effects ---------- */
+.cursive {
+	font-family: Satisfy !important;
+}

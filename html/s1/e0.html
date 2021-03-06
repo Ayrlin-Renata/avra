@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html class="basicstyle">
+
+<head>
+	<title>AVRA</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1' /> <!-- JQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script> <!-- Local -->
+	<!-- <link href="https://ayrlin-renata.github.io/wb-toolkit/css/common.css" rel="stylesheet"> -->
+	<link href="../../wb-toolkit/css/common.css" rel="stylesheet">
+	<link href="../../css/site.css" rel="stylesheet">
+	<link href="../../css/episode.css" rel="stylesheet">
+	<link href="../../css/s1.css" rel="stylesheet">
+	<script src="../../lib/iframe-resizer-4.2.9/iframeResizer.min.js"></script>
+	<!-- <script src="https://ayrlin-renata.github.io/wb-toolkit/js/common.js"></script> -->
+	<script src="../../wb-toolkit/js/common.js"></script>
+	<script src="../../js/episode.js"></script>
+	<script src="../../js/s1.js"></script>
+</head>
+
+<body>
+	<div id="load-screen" class="fullslate">
+		<div id="load-text-container"> <span id="load-title" class="heading-1">Loading.</span> <span id="load-subtitle"
+				class="subheading-1">Verifying conservation of friendship...</span> </div>
+	</div>
+	<div id="title-screen">
+		<div id="title-container"><a href="../landing.html?nointro"><span id="title-1" class="t-text">A</span> <span id="title-2"
+				class="t-text">V</span> <span id="title-3" class="t-text">R</span> <span id="title-4"
+				class="t-text">A</span> </a></div>
+		<div id="subtitle-container">
+			<span id="subtitle-1" class="st-text">The </span>
+			<span id="subtitle-2" class="cursive st-text">STARS</span>
+			<span id="subtitle-3" class="st-text"> shine </span>
+			<span id="subtitle-4" class="cursive st-text">BRIGHTEST</span>
+			<span id="subtitle-5" class="st-text"> in</span>
+			<span id="subtitle-6" class="st-text"> the</span>
+			<span id="subtitle-7" class="st-text"> dark</span>
+		</div>
+	</div>
+	<div id="top-overlay"> <img id="tris-overlay" src="../img/svg/tris.svg"> </div>
+	<div id="content-area" class="body-container">
+		<div class="cover-row">
+			<div class="cover-image">
+				<img src="../../img/cover/season 1.png">
+			</div>
+			<div class="card-row">
+				<div class="cover-row card" onclick="clickCard(this);">
+					<div class="cover-image">
+						<img src="../../img/cover/default.png">
+					</div>
+					<iframe class="story body-row" seamless src="../stories/afterlife.html"></iframe>
+				</div>
+				<div class="cover-row card" onclick="clickCard(this);">
+					<div class="cover-image">
+						<img src="../../img/cover/default.png">
+					</div>
+					<iframe class="story body-row" seamless src="../stories/afterlife.html"></iframe>
+				</div>
+				<div class="cover-row card" onclick="clickCard(this);">
+					<div class="cover-image">
+						<img src="../../img/cover/default.png">
+					</div>
+					<iframe class="story body-row" seamless src="../stories/afterlife.html"></iframe>
+				</div>
+			</div>
+		</div>
+		<script> //loading after the iframe
+			var ifr = $('iframe.story').iFrameResize({ log: true, heightCalculationMethod: 'bodyScroll', });
+			// maxWidth: $('.card-row > .cover-row.card > .cover-image')[0].offsetWidth, 
+		</script>
+		<div id="comment-area" class="body-row">
+			<span class="subheading-1">Comments</span>
+			<div id="comment-cred"><a target="_blank" href="https://www.htmlcommentbox.com">(via: Html Comment Box)</a></div>
+			<!-- begin wwww.htmlcommentbox.com -->
+			<div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
+			<link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+			<script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} hcb_user.PAGE="https://ayrlin-renata.github.io/avra/html/s1/e0.html";(function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24CKnAuHuwa6v1%2FPeVJz3UF%2F"+"&opts=16862&num=20&ts=1614062288781");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+			<!-- end www.htmlcommentbox.com -->
+		</div>
+	</div>
+
+	<body>
+
+</html>

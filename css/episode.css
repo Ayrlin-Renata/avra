@@ -4,7 +4,6 @@ author: Ayrlin Renata
 */
 
 /* ---------- elements ---------- */
-
 body::-webkit-scrollbar {
 	display: none;
 }
@@ -38,13 +37,13 @@ blockquote {
 
 iframe {
 	border: none;
+	height: 80px;
     width: 100%;
+	max-width: 100%;
+	padding: 0px !important;
 }
 /* ---------- classes ---------- */
 
-.in-frame-body {
-	background-color: #0c0c0c;
-}
 .t-text {
 	/* position */
 	margin-left: 10px;
@@ -71,35 +70,22 @@ iframe {
 .body-row {
 	padding-right: 5vw;
 }
-.collapse-row {
-	margin-top: 0vh;
+
+.card-row {
+	flex-direction: row;
+    flex-wrap: wrap;
 }
-.highlight-gray {
-	color: rgb(155,154,151);
+.card-row > .card {
+	flex-basis: 47%;
+	flex-grow: 1;
 }
-.highlight-brown {
-	color: rgb(100,71,58);
+.card-row::after {
+	content: '';
+	flex-grow: 6;
+	flex-basis: 40%;
 }
-.highlight-orange {
-	color: rgb(217,115,13);
-}
-.highlight-yellow {
-	color: rgb(223,171,1);
-}
-.highlight-teal {
-	color: rgb(15,123,108);
-}
-.highlight-blue {
-	color: rgb(11,110,153);
-}
-.highlight-purple {
-	color: rgb(105,64,165);
-}
-.highlight-pink {
-	color: rgb(173,26,114);
-}
-.highlight-red {
-	color: rgb(224,62,62);
+.card.full {
+	flex-basis: 100%;
 }
 
 /* ---------- ids ---------- */

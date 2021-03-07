@@ -5,20 +5,25 @@
         
         <!-- External Imports -->
         <script type="application/javascript" src="https://unpkg.com/vue@next"></script>
-        <script type="application/javascript" src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+        <script type="application/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 		<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
 
         <!-- Local -->
 		<!-- <script src="https://ayrlin-renata.github.io/wb-toolkit/js/common.js"></script> -->
 		<script type="application/javascript" src="../wb-toolkit/js/common.js"></script>
- 
+        
         <!-- <link href="https://ayrlin-renata.github.io/wb-toolkit/css/common.css" rel="stylesheet"> -->
 		<link href="../wb-toolkit/css/common.css" rel="stylesheet">
 		<link href="../css/site.css" rel="stylesheet">
 		<link href="../css/nav.css" rel="stylesheet">
+        
+        <!-- Pages -->
+        <link href="../css/page-stories.css" rel="stylesheet">
 		
         <!-- Components -->
         <link href="../css/components/landing-screen.css" rel="stylesheet">
+        <link href="../css/components/nav-title-box.css" rel="stylesheet">
+        <link href="../css/components/comment-box.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
         
     </head>
@@ -101,19 +106,18 @@
                 </div>
             </div>
             <!-- STORIES PAGE -->
-            <div id="nav-page" v-if="page == 'stories'">
+            <div id="stories-page" v-if="page == 'stories'">
                 <div id="content-area" class="body-container">
                     <div class="body-row">
                         <div class="heading-1">> Misc. Works</div>
                         <div class="subheading-1">Content in AVRA that's not on the mainline.</div>
                         <div class="text-1">Any of my writings and scribblings that doesn't fit into the story structure.</div>
                     </div>
+                    <div id="sacrifice" class="stories"></div>
                     <htmlcommentbox-template></htmlcommentbox-template>
                 </div>
             </div>
         </div>
-        <!-- scripts -->
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         <!-- TEMPLATES -->
         <!-- load screen -->
         <script type="text/x-template" id="load-screen-template">
@@ -190,8 +194,13 @@
                 <!-- end www.htmlcommentbox.com -->
             </div>
         </script>
+        <!-- scripts -->
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         <!-- VUE -->
         <!-- <script type="application/javascript" src="https://www.htmlcommentbox.com/jread?page=https%3A%2F%2Fayrlin-renata.github.io%2Favra%2Fhtml%2Fstories.html&mod=%241%24wq1rdBcg%24CKnAuHuwa6v1%2FPeVJz3UF%2F&opts=16862&num=20&ts=1614062288781"></script> -->
+        <script type="application/javascript" src="../js/components/landing-screen.js"></script>
+        <script type="application/javascript" src="../js/components/nav-title-box.js"></script>
+        <script type="application/javascript" src="../js/components/comment-box.js"></script>
         <script type="application/javascript" src="../js/nav.js"></script>
     </body>
 </html>

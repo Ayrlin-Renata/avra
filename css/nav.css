@@ -1,0 +1,42 @@
+body::-webkit-scrollbar {
+	display: none;
+}
+
+#nav > div {
+	text-align: -webkit-center;
+}
+#nav > div > div {
+	text-align: initial;
+}
+
+/* ---------- ko-fi fixes ---------- */
+[id^=kofi-widget-overlay] {
+	background-color: #0c0c0c !important;
+    margin-top: 2em !important;
+    margin-bottom: 0px !important;
+    padding-bottom: 1em !important;
+}
+.floatingchat-container-wrap {
+	position: initial !important;
+}
+.floatingchat-container-wrap > .floatingchat-container {
+	position: initial !important;
+	margin-left: 10vw;
+}
+.floating-chat-kofi-popup-iframe-container {
+	border-radius: 16px !important;
+}
+.floating-chat-kofi-popup-iframe-closer {
+    top: 20px !important;
+    right: -12px !important;
+    border: 2px solid #00aaaa !important;
+    background: #151515 !important;
+    box-shadow: none !important;
+}
+.floating-chat-kofi-popup-iframe-closer > span {
+	top: 0px !important;
+}
+.floating-chat-kofi-popup-iframe-closer > span > svg > line {
+	stroke: #00aaaa !important;
+	stroke-width: 2 !important;
+}

@@ -24,6 +24,7 @@ const NavApp = {
             case 'stories': {
                 this.hcbFunction("stories","https://ayrlin-renata.github.io/avra/html/stories.html");
                 this.loadHtml("stories","sacrifice");
+                setTimeout(function() { initListeners(); }, 500);
             } break;
             default: {}
         }
@@ -55,10 +56,14 @@ const NavApp = {
             }
         },
         openGet() {
-            var sear = window.location.search;
-            if(sear) {
+            var qSParams = this.getQueryStringParams(window.location.search);
+            //console.log(qSParams)
+            if(qSParams.nointro !== undefined) {
                 this.skipIntro = true;
-            } 
+            }
+            if(qSParams.page) {
+                this.page = qSParams.page;
+            }
         },
         drawKoFi() {
             kofiWidgetOverlay.draw('ayrlin', {
@@ -70,7 +75,19 @@ const NavApp = {
         },
         loadHtml(folder,file) {
             $(((folder == '.')? "" : '.' + folder) + '#' + file).load("../html/" + folder + "/" + file + ".html");
-        }
+        },
+        getQueryStringParams(query) {
+            return query
+                ? (/^[?#]/.test(query) ? query.slice(1) : query)
+                    .split('&')
+                    .reduce((params, param) => {
+                            let [key, value] = param.split('=');
+                            params[key] = value ? decodeURIComponent(value.replace(/\+/g, ' ')) : '';
+                            return params;
+                        }, {}
+                    )
+                : {}
+        },
     }
 }
 const app = Vue.createApp(NavApp);
